@@ -1,13 +1,8 @@
 package pl.damiankotynia.connector;
 
-import pl.damiankotynia.model.Request;
-import pl.damiankotynia.model.RequestType;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.time.LocalDateTime;
 
 public class Connection implements Runnable{
     private Socket socket;

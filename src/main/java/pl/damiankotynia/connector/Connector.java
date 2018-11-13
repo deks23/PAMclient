@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Connector implements Runnable{
+public class Connector {
 
 
     private int port;
@@ -20,7 +20,7 @@ public class Connector implements Runnable{
             e.printStackTrace();
         }
     }
-    @Override
+
     public void run(){
         while(true){
             try {
