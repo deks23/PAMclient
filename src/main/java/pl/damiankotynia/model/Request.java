@@ -21,4 +21,12 @@ public class Request implements Serializable {
     public void setRequestType(RequestType requestType) {
         this.requestType = requestType;
     }
+
+    @Override
+    public String toString() {
+        return "Request{" +
+                "service=" + service.toString() +
+                ", requestType=" + requestType.toString() +
+                '}';
+    }
 }
