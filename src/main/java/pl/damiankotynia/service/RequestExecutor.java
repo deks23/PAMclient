@@ -16,10 +16,15 @@ public class RequestExecutor {
         switch (validatedRequest.getRequestType()) {
             case POST:
                 System.out.println(REQUEST_EXECUTOR_LOGGER + "post " + validatedRequest.toString());
-                post(validatedRequest);
+                if (!post(validatedRequest)) {
+                    System.out.println(REQUEST_EXECUTOR_LOGGER + "NIEPOWODZENIE TODO");
+                }
+                //TODO info dla wszystkich o rezerwacji terminu
+                //TODO zwrocenie listy rezerwacji rezerwujacego uzytkownika
                 break;
             case DELETE:
-                System.out.println("DELETE: \t >>>>");
+                System.out.println(REQUEST_EXECUTOR_LOGGER + "delete " + validatedRequest.toString());
+
                 break;
             case GET:
                 System.out.println("GET: \t >>>>");
@@ -44,7 +49,6 @@ public class RequestExecutor {
             return true;
         else
             return false;
-
     }
 
 }

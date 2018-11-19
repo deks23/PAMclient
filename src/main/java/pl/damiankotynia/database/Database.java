@@ -8,10 +8,7 @@ import pl.damiankotynia.model.Service;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import static pl.damiankotynia.service.Utils.DATABASE_LOGGER;
 
@@ -33,6 +30,7 @@ public class Database {
 
     public synchronized boolean save(Service service){
         if(checkIfAvalible(service.getStartTime())){
+            service.setId(getUUID());
             data.add(service);
             System.out.println(DATABASE_LOGGER + "dodano do bazy" + service.toString());
             return true;
@@ -72,6 +70,11 @@ public class Database {
                 return false;
         }
         return true;
+    }
+
+
+    private String getUUID(){
+        return UUID.randomUUID().toString();
     }
 
     private boolean checkIfCanRemove(Service serviceToRemove, int nickName)throws PermissionDeniedException {

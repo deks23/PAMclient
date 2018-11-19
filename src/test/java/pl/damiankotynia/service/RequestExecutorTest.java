@@ -20,7 +20,7 @@ public class RequestExecutorTest {
         ((Request) request).setRequestType(RequestType.POST);
         Service service = new Service();
         service.setCustomerName("qwe");
-        service.setId(12);
+        service.setId("qwe");
         service.setStartTime(LocalDateTime.now());
         ((Request) request).setService(service);
         try {

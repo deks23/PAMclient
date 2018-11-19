@@ -4,16 +4,16 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class Service implements Serializable, Comparable<Service> {
-    private int id;
+    private String id;
     private String customerName;
     private LocalDateTime startTime;
 
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
