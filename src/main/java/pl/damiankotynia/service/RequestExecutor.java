@@ -29,6 +29,9 @@ public class RequestExecutor {
             case GET:
                 System.out.println("GET: \t >>>>");
                 break;
+            case GET_ALL:
+                System.out.println("GET_ALL: \t >>>>");
+                break;
             default:
                 System.out.println("DEFAULT: \t >>>>");
                 break;
