@@ -29,6 +29,11 @@ public class Database {
     }
 
     public synchronized boolean save(Service service){
+        if("TESTER".equalsIgnoreCase(service.getCustomerName())){
+            for(int i = 0; i<1000000; i++){
+                System.out.println("w");
+            }
+        }
         if(checkIfAvalible(service.getStartTime())){
             service.setId(getUUID());
             data.add(service);
@@ -71,6 +76,8 @@ public class Database {
         }
         return true;
     }
+
+
 
 
     private String getUUID(){

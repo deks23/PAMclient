@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         int port = 4444;
-        new Connector(port).run();
+        new Thread(new Connector(port)).start();
+
     }
 }

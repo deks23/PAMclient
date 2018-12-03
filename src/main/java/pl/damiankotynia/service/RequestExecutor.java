@@ -1,8 +1,11 @@
 package pl.damiankotynia.service;
 
+import pl.damiankotynia.connector.Connector;
 import pl.damiankotynia.database.Database;
 import pl.damiankotynia.exceptions.InvalidRequestFormatException;
 import pl.damiankotynia.model.Request;
+import pl.damiankotynia.model.Response;
+import pl.damiankotynia.model.ResponseType;
 
 import static pl.damiankotynia.service.Utils.REQUEST_EXECUTOR_LOGGER;
 
@@ -11,21 +14,37 @@ public class RequestExecutor {
     private Database database;
 
 
-    public boolean executeRequest(Object request) throws InvalidRequestFormatException {
+    public Response executeRequest(Object request) throws InvalidRequestFormatException {
         Request validatedRequest = getRequest(request);
+        Response response = response = new Response();;
         switch (validatedRequest.getRequestType()) {
             case POST:
                 System.out.println(REQUEST_EXECUTOR_LOGGER + "post " + validatedRequest.toString());
                 if (!post(validatedRequest)) {
                     System.out.println(REQUEST_EXECUTOR_LOGGER + "NIEPOWODZENIE TODO");
+                    response.setResponseType(ResponseType.RESERVATION_FAILED);
+                    response.setMessage("Niepowodzenie rezerwacji");
+                }else{
+                    response.setResponseType(ResponseType.RESERVATION_COMPLETE);
+                    response.setMessage("Rezerwacja przebiegla pomyslnie");
+                    response.setServiceList(database.findByCustomerName(validatedRequest.getService().getCustomerName()));
                 }
-                //TODO info dla wszystkich o rezerwacji terminu
-                //TODO zwrocenie listy rezerwacji rezerwujacego uzytkownika
                 break;
+
+
             case DELETE:
                 System.out.println(REQUEST_EXECUTOR_LOGGER + "delete " + validatedRequest.toString());
-
+                if(!delete(validatedRequest)){
+                    System.out.println(REQUEST_EXECUTOR_LOGGER + "NIEPOWODZENIE TODO");
+                    response.setResponseType(ResponseType.RESERVATION_REMOVING_FAILED);
+                    response.setMessage("Niepowodzenie usuwania rezerwacji");
+                }else{
+                    response.setResponseType(ResponseType.RESERVATION_REMOVING_FAILED);
+                    response.setMessage("Pomyslnie usunięto reserwację");
+                    response.setServiceList(database.findByCustomerName(validatedRequest.getService().getCustomerName()));
+                }
                 break;
+
             case GET:
                 System.out.println("GET: \t >>>>");
                 break;
@@ -36,7 +55,7 @@ public class RequestExecutor {
                 System.out.println("DEFAULT: \t >>>>");
                 break;
         }
-        return false;
+        return response;
     }
 
     private Request getRequest(Object request) throws InvalidRequestFormatException {
@@ -52,6 +71,11 @@ public class RequestExecutor {
             return true;
         else
             return false;
+    }
+
+    private boolean delete(Request request){
+        database.remove(request.getService());
+        return false;
     }
 
 }

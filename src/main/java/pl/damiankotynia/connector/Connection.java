@@ -1,14 +1,16 @@
 package pl.damiankotynia.connector;
 
 import pl.damiankotynia.exceptions.InvalidRequestFormatException;
-import pl.damiankotynia.model.Request;
+import pl.damiankotynia.model.Response;
+import pl.damiankotynia.model.ResponseType;
 import pl.damiankotynia.service.RequestExecutor;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.concurrent.Callable;
+import java.net.SocketException;
+import java.util.List;
 
 import static pl.damiankotynia.service.Utils.CONNECTION_LOGGER;
 
@@ -18,12 +20,16 @@ public class Connection implements Runnable {
     private ObjectInputStream inputStream = null;
     private ObjectOutputStream outputStream = null;
     private RequestExecutor requestExecutor;
+    private List<Connection> connectionList;
+    private boolean running;
 
-    public Connection(Socket socket, int client) {
+    public Connection(Socket socket, int client, List<Connection> connectionList) {
         System.out.println(CONNECTION_LOGGER + "New Connection");
         this.clientNumber = client;
         this.socket = socket;
         this.requestExecutor = new RequestExecutor();
+        this.connectionList = connectionList;
+        this.running = true;
         try {
             this.outputStream = new ObjectOutputStream(socket.getOutputStream());
             this.inputStream = new ObjectInputStream(socket.getInputStream());
@@ -35,24 +41,53 @@ public class Connection implements Runnable {
 
     @Override
     public void run() {
-        //TODO bedzie trzeba dac to w petli zeby bylo polaczenie z userem
-        try {
-            Object request = inputStream.readObject();
-            System.out.println(CONNECTION_LOGGER + request.toString());
+        while (running) {
             try {
-                requestExecutor.executeRequest(request);
-            } catch (InvalidRequestFormatException e) {
-                e.printStackTrace();
-            }
-            socket.close();
-            outputStream.close();
+                Object request = inputStream.readObject();
+                System.out.println(CONNECTION_LOGGER + request.toString());
+                Response response = null;
+                try {
+                    response = requestExecutor.executeRequest(request);
+                } catch (InvalidRequestFormatException e) {
+                    e.printStackTrace();
+                }
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+                if (response.getResponseType().equals(ResponseType.RESERVATION_COMPLETE))
+                    brodcastMessage(response);
+                outputStream.writeObject(response);
+
+
+            } catch (SocketException e) {
+                System.out.println(CONNECTION_LOGGER + "Zerwano połączenie");
+                running = !running;
+                connectionList.remove(this);
+            } catch (IOException e) {
+                System.out.println(CONNECTION_LOGGER + "Zerwano połączenie2");
+                running = !running;
+                connectionList.remove(this);
+            } catch (ClassNotFoundException e) {
+                System.out.println(CONNECTION_LOGGER + "Niepoprawny format zapytania");
+            }
         }
 
+
+    }
+
+    public void sendMessage(Response message) {
+        try {
+            outputStream.writeObject(message);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void brodcastMessage(Response message) {
+        for (Connection connection : connectionList) {
+            if (!connection.equals(this))
+                synchronized (connection) {
+                    connection.sendMessage(message);
+                }
+        }
     }
 
 }
