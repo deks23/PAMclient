@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="49b136f4-9221-49b7-8884-7422cdf27cd5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Response.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/ResponseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/ResponseType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pl/damiankotynia/service/RequestExecutorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pl/damiankotynia/service/RequestExecutorTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +22,8 @@
       <file leaf-file-name="Connector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="360">
+              <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connection.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Connection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+            <state relative-caret-position="860">
+              <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,17 +43,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/database/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="-250">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1612#1613#0" expanded="true" />
-                <element signature="e#1663#1664#0" expanded="true" />
-                <element signature="e#2144#2145#0" expanded="true" />
-                <element signature="e#2195#2196#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+                <element signature="e#568#569#0" expanded="true" />
+                <element signature="e#1694#1695#0" expanded="true" />
+                <element signature="e#1721#1722#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,12 +62,8 @@
       <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="80">
               <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
-              <folding>
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -81,10 +71,12 @@
       <file leaf-file-name="RequestExecutor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            <state relative-caret-position="240">
+              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/ResponseType.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -112,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Response.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#621#622#0" expanded="true" />
@@ -166,13 +158,13 @@
         <option value="$PROJECT_DIR$/src/test/java/pl/damiankotynia/service/RequestExecutorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/RequestType.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/ResponseType.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connector.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/database/Database.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Service.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Response.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/database/Database.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/ResponseType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connection.java" />
       </list>
     </option>
@@ -185,10 +177,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1440" />
-    <option name="y" value="-1020" />
-    <option name="width" value="1200" />
-    <option name="height" value="1920" />
+    <option name="y" value="-1200" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -197,8 +188,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,11 +272,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="data&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/database/Database.java&#10;respo&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/ResponseType.java&#10;exec&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/service/RequestExecutor.java&#10;reformat code&#9;ACTION&#9;ReformatCode&#10;connec&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/connector/Connection.java&#10;respons&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Response.java&#10;service&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Service.java&#10;ser&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Service.java&#10;exe&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/service/RequestExecutor.java&#10;res&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Response.java&#10;servi&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Service.java&#10;OPTIMIZE IMPO&#9;ACTION&#9;OptimizeImports&#10;reques&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Request.java&#10;reformat co&#9;ACTION&#9;ReformatCode&#10;imports&#9;ACTION&#9;OptimizeImports" />
+    <property name="SearchEverywhereHistoryKey" value="RESPONSE&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/ResponseType.java&#10;optimize im&#9;ACTION&#9;OptimizeImports&#10;data&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/database/Database.java&#10;respo&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/ResponseType.java&#10;exec&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/service/RequestExecutor.java&#10;reformat code&#9;ACTION&#9;ReformatCode&#10;connec&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/connector/Connection.java&#10;respons&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Response.java&#10;service&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Service.java&#10;ser&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Service.java&#10;exe&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/service/RequestExecutor.java&#10;res&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Response.java&#10;servi&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Service.java&#10;OPTIMIZE IMPO&#9;ACTION&#9;OptimizeImports&#10;reques&#9;FILE&#9;file:///Users/damiankotynia/Documents/Uczelnia/PAI/fir/src/main/java/pl/damiankotynia/model/Request.java&#10;reformat co&#9;ACTION&#9;ReformatCode&#10;imports&#9;ACTION&#9;OptimizeImports" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../bananBank/Time-Bank" />
   </component>
   <component name="RunDashboard">
@@ -382,7 +374,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-1020" width="1200" height="1920" extended-state="0" />
+    <frame x="0" y="-1200" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -393,18 +385,18 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44760212" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20043337" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.195" />
-      <window_info anchor="bottom" id="SonarLint" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12135417" />
+      <window_info anchor="bottom" id="SonarLint" order="11" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39761648" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39761648" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -425,18 +417,6 @@
           <line>33</line>
           <properties />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="27" />
@@ -531,6 +511,8 @@
           <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -616,6 +598,8 @@
           <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -790,51 +774,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/ResponseType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/RequestType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="360">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
-          <folding>
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -856,36 +801,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Response.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/RequestType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="-250">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="e#2144#2145#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#1721#1722#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/model/ResponseType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/service/RequestExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/damiankotynia/connector/Connection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="90" column="9" lean-forward="true" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

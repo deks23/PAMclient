@@ -1,14 +1,13 @@
 package pl.damiankotynia.database;
 
-import org.omg.CORBA.DATA_CONVERSION;
 import pl.damiankotynia.exceptions.PermissionDeniedException;
-import pl.damiankotynia.exceptions.TermNotAvalibleException;
 import pl.damiankotynia.model.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.UUID;
 
 import static pl.damiankotynia.service.Utils.DATABASE_LOGGER;
 
@@ -30,8 +29,9 @@ public class Database {
 
     public synchronized boolean save(Service service){
         if("TESTER".equalsIgnoreCase(service.getCustomerName())){
-            for(int i = 0; i<1000000; i++){
-                System.out.println("w");
+            double a = 1;
+            for(long i = 0; i<1000000000; i++){
+                a = a *0.00005;
             }
         }
         if(checkIfAvalible(service.getStartTime())){
@@ -59,8 +59,14 @@ public class Database {
         return data;
     }
 
-    public synchronized boolean remove(Service serviceToRemove){
-        return data.remove(serviceToRemove);
+    public synchronized boolean remove(Service service){
+        if("TESTER".equalsIgnoreCase(service.getCustomerName())){
+            double a = 1;
+            for(long i = 0; i<1000000000; i++){
+                a = a *0.00005;
+            }
+        }
+        return data.remove(service);
     }
 
     private boolean checkIfAvalible(LocalDateTime startTime){

@@ -52,10 +52,11 @@ public class Connection implements Runnable {
                     e.printStackTrace();
                 }
 
-                if (response.getResponseType().equals(ResponseType.RESERVATION_COMPLETE))
+                if (ResponseType.RESERVATION_COMPLETE.equals(response.getResponseType()))
                     brodcastMessage(response);
-                outputStream.writeObject(response);
-
+                synchronized (outputStream) {
+                    outputStream.writeObject(response);
+                }
 
             } catch (SocketException e) {
                 System.out.println(CONNECTION_LOGGER + "Zerwano połączenie");
@@ -73,20 +74,20 @@ public class Connection implements Runnable {
 
     }
 
-    public void sendMessage(Response message) {
+    private void sendMessage(Response message) {
         try {
-            outputStream.writeObject(message);
+            synchronized (outputStream) {
+                outputStream.writeObject(message);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void brodcastMessage(Response message) {
+    private void brodcastMessage(Response message) {
         for (Connection connection : connectionList) {
             if (!connection.equals(this))
-                synchronized (connection) {
                     connection.sendMessage(message);
-                }
         }
     }
 
