@@ -60,7 +60,7 @@ public class RequestExecutor {
             response.setMessage("Niepowodzenie rezerwacji");
         }else{
             response.setResponseType(ResponseType.RESERVATION_COMPLETE);
-            response.setMessage("Rezerwacja przebiegla pomyslnie");
+            response.setMessage(validatedRequest.getService().getStartTime().toString() + "termin został zarezerwowany");
             response.setServiceList(database.findByCustomerName(validatedRequest.getService().getCustomerName()));
         }
     }
@@ -73,7 +73,7 @@ public class RequestExecutor {
             response.setMessage("Niepowodzenie usuwania rezerwacji");
         }else{
             response.setResponseType(ResponseType.DELETED_RESERVATION);
-            response.setMessage("Pomyslnie usunięto reserwację");
+            response.setMessage(validatedRequest.getService().getStartTime().toString() + "termin został zwolniony");
             response.setServiceList(database.findByCustomerName(validatedRequest.getService().getCustomerName()));
         }
     }

@@ -2,7 +2,6 @@ package pl.damiankotynia.connector;
 
 import pl.damiankotynia.exceptions.InvalidRequestFormatException;
 import pl.damiankotynia.model.Response;
-import pl.damiankotynia.model.ResponseType;
 import pl.damiankotynia.service.RequestExecutor;
 
 import java.io.IOException;
@@ -52,11 +51,23 @@ public class Connection implements Runnable {
                     e.printStackTrace();
                 }
 
-                if (ResponseType.RESERVATION_COMPLETE.equals(response.getResponseType()))
-                    brodcastMessage(response);
-                synchronized (outputStream) {
-                    outputStream.writeObject(response);
+
+                switch (response.getResponseType()) {
+                    case RESERVATION_COMPLETE:
+                    case DELETED_RESERVATION:
+                        brodcastMessage(response.getMessage());
+                        synchronized (outputStream) {
+                            outputStream.writeObject(response);
+                        }
+                        break;
+                    case RESERVATION_FAILED:
+                    case RESERVATION_REMOVING_FAILED:
+                        synchronized (outputStream) {
+                            outputStream.writeObject(response);
+                        }
+                        break;
                 }
+
 
             } catch (SocketException e) {
                 System.out.println(CONNECTION_LOGGER + "Zerwano połączenie");
@@ -74,7 +85,7 @@ public class Connection implements Runnable {
 
     }
 
-    private void sendMessage(Response message) {
+    public void sendMessage(String message) {
         try {
             synchronized (outputStream) {
                 outputStream.writeObject(message);
@@ -84,10 +95,10 @@ public class Connection implements Runnable {
         }
     }
 
-    private void brodcastMessage(Response message) {
+    private void brodcastMessage(String message) {
         for (Connection connection : connectionList) {
-            if (!connection.equals(this))
-                    connection.sendMessage(message);
+            if (!this.equals(connection))
+                connection.sendMessage(message);
         }
     }
 
