@@ -66,6 +66,12 @@ public class Connection implements Runnable {
                             outputStream.writeObject(response);
                         }
                         break;
+                    case GET_OWN_RESERVATIONS:
+                    case GET_RESERVATIONS:
+                        synchronized (outputStream){
+                            outputStream.writeObject(response);
+                        }
+                        break;
                 }
 
 

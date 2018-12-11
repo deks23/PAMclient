@@ -31,7 +31,7 @@ public class RequestExecutor {
                 getOwnReservations(validatedRequest, response);
                 break;
             case GET_ALL:
-                getAllReservations(response);
+                getAllReservations(response, validatedRequest);
                 break;
             default:
                 System.out.println("DEFAULT: \t >>>>");
@@ -41,13 +41,13 @@ public class RequestExecutor {
     }
 
     private void getOwnReservations(Request validatedRequest, Response response) {
-        System.out.println("GET: \t >>>>");
+        System.out.println(REQUEST_EXECUTOR_LOGGER + "get " + validatedRequest.toString());
         response.setServiceList(database.findByCustomerName(validatedRequest.getNickName()));
         response.setResponseType(ResponseType.GET_OWN_RESERVATIONS);
     }
 
-    private void getAllReservations(Response response) {
-        System.out.println("GET_ALL: \t >>>>");
+    private void getAllReservations(Response response, Request validatedRequest) {
+        System.out.println(REQUEST_EXECUTOR_LOGGER + "get_all " + validatedRequest.toString());
         response.setServiceList(database.getAll());
         response.setResponseType(ResponseType.GET_RESERVATIONS);
     }
