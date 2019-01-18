@@ -55,12 +55,12 @@ public class RequestExecutor {
     private void saveReservation(Request validatedRequest, Response response) {
         System.out.println(REQUEST_EXECUTOR_LOGGER + "post " + validatedRequest.toString());
         if (!database.save(validatedRequest.getService())) {
-            System.out.println(REQUEST_EXECUTOR_LOGGER + "NIEPOWODZENIE TODO");
+            System.out.println(REQUEST_EXECUTOR_LOGGER + "NIEPOWODZENIE REZERWACJI");
             response.setResponseType(ResponseType.RESERVATION_FAILED);
             response.setMessage("Niepowodzenie rezerwacji");
         }else{
             response.setResponseType(ResponseType.RESERVATION_COMPLETE);
-            response.setMessage(validatedRequest.getService().getStartTime().toString() + "termin został zarezerwowany");
+            response.setMessage(validatedRequest.getService().getStartTime().toString() + " termin został zarezerwowany");
             response.setServiceList(database.findByCustomerName(validatedRequest.getService().getCustomerName()));
         }
     }
@@ -68,12 +68,12 @@ public class RequestExecutor {
     private void deleteService(Request validatedRequest, Response response) {
         System.out.println(REQUEST_EXECUTOR_LOGGER + "delete " + validatedRequest.toString());
         if(!database.remove(validatedRequest.getService())){
-            System.out.println(REQUEST_EXECUTOR_LOGGER + "NIEPOWODZENIE TODO");
+            System.out.println(REQUEST_EXECUTOR_LOGGER + "NIEPOWODZENIE USUWANIA");
             response.setResponseType(ResponseType.RESERVATION_REMOVING_FAILED);
             response.setMessage("Niepowodzenie usuwania rezerwacji");
         }else{
             response.setResponseType(ResponseType.DELETED_RESERVATION);
-            response.setMessage(validatedRequest.getService().getStartTime().toString() + "termin został zwolniony");
+            response.setMessage(validatedRequest.getService().getStartTime().toString() + " termin został zwolniony");
             response.setServiceList(database.findByCustomerName(validatedRequest.getService().getCustomerName()));
         }
     }

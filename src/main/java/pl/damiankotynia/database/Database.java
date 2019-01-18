@@ -90,10 +90,7 @@ public class Database {
         return UUID.randomUUID().toString();
     }
 
-    private boolean checkIfCanRemove(Service serviceToRemove, int nickName)throws PermissionDeniedException {
-        //TODO możliwe że do wywalenia
-        return false;
-    }
+
 
     private static final LocalTime START_TIME = LocalTime.of(10, 0);
     private static final LocalTime FINISH_TIME = LocalTime.of(18, 0);
